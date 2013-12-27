@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="sir-trevor.css">
+    <link rel="stylesheet" href="sir-trevor-icons.css">
+    
+    <script src="jquery.min.js"></script>
+    <script src="underscore-min.js"></script>
+    <script src="eventable.js"></script>
+    <script src="sir-trevor.min.js"></script>
+  </head>
+  <body>
+    <form>
+      <textarea class="js-sir-trevor-js"></textarea>
+    </form>
+    <script>
+    $(document).ready( function() {
+      
+      SirTrevor.setDefaults({
+        uploadUrl: '/images'
+      });
+
+      new SirTrevor.Editor({
+        el: $('.js-sir-trevor-js')
+      });
+  
+    });
+    </script>
+  </body>
+</html>
